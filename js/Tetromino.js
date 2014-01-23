@@ -76,12 +76,16 @@ Tetromino.prototype.getShape = function() {
 
 // draw the tetromino into a grid by modifying data
 // in the grid
+// if collision is detected then this method won't modify the
+// grid and return -1
 Tetromino.prototype.drawIntoGrid = function(grid) {
     var drawable = true;
     for (var i=0; i<4; i++)
         for (var j=0; j<4; j++) {
             if (this.getShape()[i][j] == 1) {
-                if (((this.y+j) >= grid.length) || ((this.x+i) >= grid[0].length) || grid[this.y+j][this.x+i] != null) {
+                if (((this.y+j) >= grid.length) || ((this.x+i) >= grid[0].length)
+                    || (this.y+j < 0) || (this.x+i < 0)
+                    || grid[this.y+j][this.x+i] != null) {
                     drawable = false;
                     return -1;
                 }
@@ -96,6 +100,7 @@ Tetromino.prototype.drawIntoGrid = function(grid) {
             }
 
         }
+    return 0;
 }
 
 Tetromino.prototype.eraseFromGrid = function(grid) {
