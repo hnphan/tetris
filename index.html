@@ -2,19 +2,78 @@
 <html>
 <head>
 <title>[T]etris</title>
-    <script src="js/Tetromino.js"></script>
-    <script src="js/Square.js"></script>
-    <script src="js/Game.js"></script>
+<script src="js/Tetromino.js"></script>
+<script src="js/Square.js"></script>
+<script src="js/Game.js"></script>
 
-    <script>
+<script>
+var game;
 function initialize() {
     var canvas = document.getElementById("gameCanvas");
     var ctx = canvas.getContext("2d");
+    game = new Game(10, 20, ctx);
+    game.spawn();
+}
+
+
+/*************************************************
+ Responds to a key press event
+ *************************************************/
+function keyDown(e) {
+
+    if(e.keyCode == 37) { //Left arrow
+        game.curTetro.eraseFromGrid(game.grid);
+        game.curTetro.x -=1;
+        var status = game.curTetro.drawIntoGrid(game.grid);
+        if ( status == -1) {
+            game.curTetro.x +=1;
+            game.curTetro.drawIntoGrid(game.grid)
+        }
+
+    }
+    else if(e.keyCode == 38) { //Up arrow
+        game.curTetro.eraseFromGrid(game.grid);
+        game.curTetro.rotate(1);
+        var status = game.curTetro.drawIntoGrid(game.grid);
+        if ( status == -1) {
+            game.curTetro.rotate(-1);
+            game.curTetro.drawIntoGrid(game.grid)
+        }
+    }
+    else if(e.keyCode == 39) { //Right arrow
+        game.curTetro.eraseFromGrid(game.grid);
+        game.curTetro.x +=1;
+        var status = game.curTetro.drawIntoGrid(game.grid);
+        if ( status == -1) {
+            game.curTetro.x -=1;
+            game.curTetro.drawIntoGrid(game.grid)
+        }
+
+        }
+    else if(e.keyCode == 40) { //Down arrow
+        game.curTetro.eraseFromGrid(game.grid);
+        game.curTetro.y +=1;
+        var status = game.curTetro.drawIntoGrid(game.grid);
+        if (status == -1) {
+            game.curTetro.y -= 1;
+            game.curTetro.drawIntoGrid(game.grid)
+        }
+    }
+    else {
+        //Create a new tetrimino
+        game.spawn();
+    }
+
+    // collision detection
+
+    console.log("calling draw grid....");
+    //Redraw the grid
+    game.drawGrid();
 }
 </script>
 </head>
-<body onload = "initialize()">
-    <canvas id="gameCanvas" height="400px" width="400px"
+<body onload = "initialize()"onkeydown="keyDown(event);">
+    <canvas id="gameCanvas" height="400px" width="200px"
         style="background-color:#444444"></canvas>
 </body>
 </html>
