@@ -32,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Battle.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Battle.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/Battle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="26" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.6372712" vertical-offset="1207" max-vertical-offset="1845">
+            <state line="106" column="26" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="1845">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tetromino.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Tetromino.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/Tetromino.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1754" max-vertical-offset="2400">
+            <state line="125" column="5" selection-start="3572" selection-end="3572" vertical-scroll-proportion="0.49916804" vertical-offset="1575" max-vertical-offset="2970">
               <folding />
             </state>
           </provider>
@@ -146,6 +146,7 @@
         <option value="$PROJECT_DIR$/public/js/Square.js" />
         <option value="$PROJECT_DIR$/public/js/Game.js" />
         <option value="$PROJECT_DIR$/public/js/Battle.js" />
+        <option value="$PROJECT_DIR$/public/js/Tetromino.js" />
       </list>
     </option>
   </component>
@@ -409,13 +410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/Tetromino.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1754" max-vertical-offset="2400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Room.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="510" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
@@ -439,10 +433,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/Battle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="26" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.6372712" vertical-offset="1207" max-vertical-offset="1845">
+        <state line="106" column="26" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="1845">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/Tetromino.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="5" selection-start="3572" selection-end="3572" vertical-scroll-proportion="0.49916804" vertical-offset="1575" max-vertical-offset="2970">
+          <folding />
         </state>
       </provider>
     </entry>
