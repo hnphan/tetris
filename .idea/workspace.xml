@@ -95,19 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lobby.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Lobby.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/Lobby.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="55" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Room.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/Room.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="2" selection-start="599" selection-end="599" vertical-scroll-proportion="0.6741573" vertical-offset="0" max-vertical-offset="623">
+            <state line="8" column="55" selection-start="329" selection-end="329" vertical-scroll-proportion="-0.37239164" vertical-offset="322" max-vertical-offset="945">
               <folding />
             </state>
           </provider>
@@ -481,13 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/Lobby.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="55" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/Square.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="385" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
@@ -504,7 +488,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/Room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="2" selection-start="599" selection-end="599" vertical-scroll-proportion="0.6741573" vertical-offset="0" max-vertical-offset="623">
+        <state line="17" column="0" selection-start="450" selection-end="450" vertical-scroll-proportion="0.4093098" vertical-offset="0" max-vertical-offset="623">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/Lobby.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="55" selection-start="329" selection-end="329" vertical-scroll-proportion="-0.37239164" vertical-offset="322" max-vertical-offset="945">
           <folding />
         </state>
       </provider>
