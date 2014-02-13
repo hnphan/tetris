@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>[T]etris</title>
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/Tetromino.js"></script>
+    <script src="js/Square.js"></script>
+    <script src="js/Control.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Lobby.js"></script>
+
+<!-- <script>
+var game;
+var game2;
+var timer;
+function initialize() {
+    var canvas = document.getElementById("gameCanvas");
+    var ctx = canvas.getContext("2d");
+    game = new Game(10, 20, ctx);
+    game.setScreenOrigin(100,100);
+    game.spawn();
+    game.drawGrid();
+    clearInterval(timer);
+    timer = setInterval(function(){updateState(game)}, 1000);
+
+
+    /*game2 = new Game(10, 20, ctx);
+    game2.setScreenOrigin(400, 100);
+    game2.spawn();
+    game2.drawGrid();*/
+}
+
+
+/*************************************************
+ Responds to a key press event
+ *************************************************/
+function keyDown(e) {
+
+    if(e.keyCode == 37) { //Left arrow
+        game.curTetro.eraseFromGrid(game.grid);
+        game.curTetro.x -=1;
+        var status = game.curTetro.drawIntoGrid(game.grid);
+        if ( status == -1) {
+            game.curTetro.x +=1;
+            game.curTetro.drawIntoGrid(game.grid)
+        }
+    }
+    else if(e.keyCode == 38) { //Up arrow
+        game.curTetro.eraseFromGrid(game.grid);
+        game.curTetro.rotate(1);
+        var status = game.curTetro.drawIntoGrid(game.grid);
+        if ( status == -1) {
+            game.curTetro.rotate(-1);
+            game.curTetro.drawIntoGrid(game.grid)
+        }
+    }
+    else if(e.keyCode == 39) { //Right arrow
+        game.curTetro.eraseFromGrid(game.grid);
+        game.curTetro.x +=1;
+        var status = game.curTetro.drawIntoGrid(game.grid);
+        if ( status == -1) {
+            game.curTetro.x -=1;
+            game.curTetro.drawIntoGrid(game.grid)
+        }
+
+        }
+
+    else if(e.keyCode == 40) { //Down arrow
+        game.curTetro.eraseFromGrid(game.grid);
+        game.curTetro.y +=1;
+        var status = game.curTetro.drawIntoGrid(game.grid);
+        if (status == -1) {
+            game.curTetro.y -= 1;
+            game.curTetro.drawIntoGrid(game.grid)
+        }
+    }
+
+
+    // collision detection
+
+    console.log("calling draw grid....");
+    //Redraw the grid
+    game.drawGrid();
+}
+</script>-->
+</head>
+<body>
+    <p>Play with a friend!</p>
+    <br/>
+    <div id="linkPlaceholder"></div>
+    <canvas id="gameCanvas" height="600px" width="1000px"></canvas>
+    <script> init();</script>
+</body>
+</html>
