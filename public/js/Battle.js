@@ -29,7 +29,7 @@ function init() {
     // initialize local player
     localPlayer = new Game(10, 20, ctx);
     localPlayer.roomId = roomId;
-    localPlayer.setScreenOrigin(100, 100);
+    localPlayer.setScreenOrigin(100, 50);
 
     // create game control for local player
     control = new Control(localPlayer);
@@ -67,6 +67,8 @@ var setEventHandlers = function() {
     socket.on("update", onUpdate);
 
     socket.on("attack", onAttack);
+
+    socket.on("rematch", onRematch);
 };
 
 // keyboard key down
@@ -108,7 +110,7 @@ function onNewPlayer(data) {
     remotePlayer = new Game(10, 20, ctx);
     remotePlayer.roomId = room;
     remotePlayer.grid = data.gameData;
-    remotePlayer.setScreenOrigin(400, 100);
+    remotePlayer.setScreenOrigin(400, 50);
     remotePlayer.drawGrid2();
 };
 
@@ -122,6 +124,12 @@ function onUpdate(data) {
 function onAttack(data) {
     console.log("JUST GOT ATTACKED!!! :(");
     localPlayer.isAttacked();
+}
+
+function onRematch(data) {
+    console.log("REMATCHING!!!!");
+    localPlayer.winMessage();
+    localPlayer.restart();
 }
 
 

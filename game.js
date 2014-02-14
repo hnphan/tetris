@@ -69,10 +69,18 @@ function onSocketConnection(client) {
 
     // Listen for attack message
     client.on("attack", onAttack);
+
+    // Listen for rematch message
+    client.on("rematch", onRematch);
 };
 
 function onAttack(data) {
-    this.broadcast.to(data.roomId).emit("attack", {data: "test"});
+    this.broadcast.to(data.roomId).emit("attack", {data: "attack"});
+}
+
+function onRematch(data) {
+    console.log("broadcasting rematch messaage");
+    this.broadcast.to(data.roomId).emit("rematch", {data: "rematch"});
 }
 
 function onUpdate(data) {

@@ -54,6 +54,10 @@ Game.prototype.start = function() {
     this.timer = setInterval(function(){updateState(that)}, 1000);
 }
 
+Game.prototype.restart = function() {
+    this.init();
+    this.spawn();
+}
 
 /**
  * Draw the grid based on the grid data
@@ -135,15 +139,11 @@ function updateState(game){
         var status2 = game.curTetro.drawIntoGrid(game.grid);
         console.log("status 2 is " + status2);
         if (status2 == -1) {
-            alert("game over!");
-            game.init();
+            alert("Booooo! You lost!");
+            socket.emit("rematch", {roomId: this.roomId, data: "rematch"});
+            game.restart();
         }
 
-    }
-
-    if ((this.score > 0) && (this.score % 2) == 0) {
-        console.log("scored!!!!!!!!!1");
-        socket.emit("scored", {data: "test data"});
     }
     game.drawGrid();
 }
@@ -223,6 +223,10 @@ Game.prototype.isAttacked = function() {
         }
         else this.grid[this.height-1][j] = null;
     }
+}
+
+Game.prototype.winMessage = function() {
+    alert("Yay! You won!");
 }
 
 
