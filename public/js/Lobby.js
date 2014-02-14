@@ -42,7 +42,7 @@ function onSocketConnected() {
     console.log("New room created. Room id is: "+ randomId);
     urlString = "battle.html?id=" + randomId;
     document.getElementById("linkPlaceholder").innerHTML = "Invite your friend to <a href=" +urlString + ">"
-        + window.location.pathname + urlString
+        + window.location.href + urlString
         + "</a>";
 
     // Send local player data to the game server
