@@ -139,7 +139,7 @@ function updateState(game){
         var status2 = game.curTetro.drawIntoGrid(game.grid);
         console.log("status 2 is " + status2);
         if (status2 == -1) {
-            alert("Booooo! You lost!");
+            jAlert('Booooo! You lost!','Alert Dialog');
             socket.emit("rematch", {roomId: this.roomId, data: "rematch"});
             game.restart();
         }
@@ -226,7 +226,7 @@ Game.prototype.isAttacked = function() {
 }
 
 Game.prototype.winMessage = function() {
-    alert("Yay! You won!");
+    jAlert('Yay! You won!','Alert Dialog');
 }
 
 
