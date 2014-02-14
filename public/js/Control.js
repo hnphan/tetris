@@ -48,7 +48,26 @@ var Control = function(game) {
                     game.curTetro.y -= 1;
                     game.curTetro.drawIntoGrid(game.grid);
                 }
-                 break;
+                break;
+            case 32: // Space bar
+                console.log("-----space bar pressed");
+                game.curTetro.eraseFromGrid(game.grid);
+                game.curTetro.y +=1;
+                var status = game.curTetro.drawIntoGrid(game.grid);
+                console.log("status is " + status);
+                while (status != -1) {
+                    console.log("status is --- " + status);
+                    game.curTetro.eraseFromGrid(game.grid);
+                    game.curTetro.y +=1;
+                    status = game.curTetro.drawIntoGrid(game.grid);
+                    console.log("status is --- " + status);
+                    console.log("curTetro.y: " + game.curTetro.y);
+
+                }
+                // when collision detected, undo drawing
+                game.curTetro.y -= 1;
+                game.curTetro.drawIntoGrid(game.grid);
+                break;
             /*case 1: //testing
                 console.log("emitting attack");*/
         };
