@@ -1,0 +1,7 @@
+{
+  "name": "tetris battle",
+  "description": "tetris battle with socket.io",
+  "repository": "https://github.com/hnphan/tetris",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "socket.io", "static"]
+}

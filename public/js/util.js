@@ -5,6 +5,8 @@
 
 // home url where the game is hosted such as localhost, example.com, etc
 var HOME_URL = "localhost";
+var SOCKET_IO_PORT = 8000;
+
 // return a parameter value from the current URL
 function getParam( sname )
 {
