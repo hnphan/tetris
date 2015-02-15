@@ -13,7 +13,7 @@ var canvas,                        // Canvas DOM element
  **************************************************/
 function init() {
     // initialize socket connection
-    socket = io.connect(HOME_URL, {port:80, transports: ["websocket"]});
+    socket = io.connect(HOME_URL, {port:8080, transports: ["websocket"]});
 
     // start listening to events
     setEventHandlers();
