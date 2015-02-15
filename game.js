@@ -23,7 +23,7 @@ function init() {
 
     players = [];
 
-    var port = 443;
+    var port = 5000;
 
 	// set up Socket.IO to listen on port
 	socket = io.listen(port);
@@ -32,7 +32,6 @@ function init() {
     socket.configure(function() {
             // Only use WebSockets
             socket.set("transports", ["websocket"]);
-
             // Restrict log output
             socket.set("log level", 2);
     });
