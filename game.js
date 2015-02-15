@@ -11,6 +11,9 @@ var rooms,                                  // Array of created game rooms
     socket,									// Socket controller
     players;                               // Lightweight database
 
+var express = require('express');
+var app = express();
+
 /**************************************************
 ** GAME INIT
 **************************************************/
@@ -34,8 +37,9 @@ function init() {
 
     // Start listening for events
     setEventHandlers();
+    app.use(express.static(__dirname + '/public'));
+    app.listen(process.env.PORT || 3000);
 };
-
 
 
 /**************************************************
