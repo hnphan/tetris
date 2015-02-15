@@ -35,7 +35,7 @@ function init() {
     control = new Control(localPlayer);
 
     // initialize socket connection
-    socket = io.connect(HOME_URL, {port: process.env.PORT || 5000, transports: ["websocket"]});
+    socket = io.connect(HOME_URL, {port: 80, transports: ["websocket"]});
 
     // initialize remotePlayer to null
     remotePlayer = null;
