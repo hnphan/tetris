@@ -23,7 +23,7 @@ function init() {
 
     players = [];
 
-    var port = process.env.PORT || 5000;
+    var port = 443;
 
 	// set up Socket.IO to listen on port
 	socket = io.listen(port);
