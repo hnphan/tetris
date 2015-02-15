@@ -37,6 +37,8 @@ function init() {
 
     // Start listening for events
     setEventHandlers();
+    var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+    console.log("!!!!!!!PORT: " + port)
     app.use(express.static(__dirname + '/public'));
     app.listen(process.env.OPENSHIFT_NODEJS_PORT || 8080);
 };
