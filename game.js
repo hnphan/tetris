@@ -13,6 +13,7 @@ var rooms,                                  // Array of created game rooms
 
 var express = require('express');
 var app = express();
+var server = require('http').createServer(app)
 
 /**************************************************
 ** GAME INIT
@@ -23,10 +24,8 @@ function init() {
 
     players = [];
 
-    var port = process.env.PORT || 5000;
-
 	// set up Socket.IO to listen on port
-	socket = io.listen(port);
+	socket = io.listen(server);
 
     // Configure Socket.IO
     socket.configure(function() {
